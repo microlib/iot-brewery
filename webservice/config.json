@@ -1,0 +1,51 @@
+{
+  "servers": [
+    {
+      "name": "redis",
+      "host": "192.168.1.2",
+      "port": "6000",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "mongodb-proxy",
+      "host": "192.168.1.2",
+      "port": "6000",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "haproxy-primary",
+      "host": "192.168.1.2",
+      "port": "6000",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "haproxy-secondary",
+      "host": "192.168.1.2",
+      "port": "6000",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "application-one",
+      "host": "localhost",
+      "port": "9001",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "application-two",
+      "host": "localhost",
+      "port": "9001",
+      "user": "user",
+      "pwd": "test123"
+    },{
+      "name": "application-three",
+      "host": "localhost",
+      "port": "9001",
+      "user": "user",
+      "pwd": "test123"
+    }
+  ],
+  "level": "trace",
+  "port": "9001",
+  "cache": "false",
+  "base_dir": "applications"
+}
