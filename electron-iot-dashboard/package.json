@@ -1,0 +1,23 @@
+{
+  "name": "lmz-iot-dashboard",
+  "version": "1.0.0",
+  "description": "Electron IOT dashboard",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "lmz",
+    "iot",
+    "dashboard"
+  ],
+  "author": "LMZ",
+  "license": "TBD",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "bunyan": "^1.8.5"
+  }
+}
