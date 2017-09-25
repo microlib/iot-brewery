@@ -2,9 +2,6 @@
 
 The iot brewery 
 
-```bash
-
-``` 
 ## Outline
 
 iot brewery is made of a webservice and an iotcontroller and an electron desktop dashboard
