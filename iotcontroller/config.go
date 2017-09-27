@@ -18,11 +18,11 @@ import (
  **/
 
 type Config struct {
-	Level  string   `json:"level"`
-	Url    string   `json:"url"`
-	Cron   string   `json:"cron"`
-	Sleep  int      `json:"sleep,string"`
-	Apikey string   `json:"apikey"`
+	Level  string `json:"level"`
+	Url    string `json:"url"`
+	Cron   string `json:"cron"`
+	Sleep  int    `json:"sleep,string"`
+	Apikey string `json:"apikey"`
 	Limits []Limit
 }
 
