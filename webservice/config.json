@@ -13,6 +13,12 @@
       "user": "user",
       "pwd": "test123"
     },{
+      "name": "mongodb",
+      "host": "mongodb",
+      "port": "27017",
+      "user": "lmztest",
+      "pwd": "lmzpwd"
+    },{
       "name": "haproxy-primary",
       "host": "192.168.1.2",
       "port": "6000",
@@ -47,5 +53,6 @@
   "level": "trace",
   "port": "9001",
   "cache": "false",
-  "base_dir": "applications"
+  "base_dir": "applications",
+  "apikey": "affdg3462357"
 }

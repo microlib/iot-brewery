@@ -23,6 +23,7 @@ type Config struct {
 	Basedir string `json:"base_dir"`
 	Port    string `json:"port"`
 	Cache   string `json:"cache"`
+	Apikey  string `json:"apikey"`
 	Servers []Server
 }
 

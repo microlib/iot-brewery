@@ -21,7 +21,8 @@ func startHttpServer(port string) *http.Server {
 	srv := &http.Server{Addr: ":" + port}
 
 	// add all the routes and link to handlers
-	http.HandleFunc("/iotdata", ProcessIOTData)
+	http.HandleFunc("/iotdata", IotcontrollerPostIOTData)
+	http.HandleFunc("/iotdata/list", ListIOTData)
 	http.HandleFunc("/isalive", IsAlive)
 
 	go func() {
@@ -40,10 +41,9 @@ func cleanup() {
 func main() {
 	var cfg Config
 	config = cfg.Init("config.json")
-
-	logger.Info(fmt.Sprintf("Debug LMZ %v", config.Cache))
 	logger.Level = config.Level
 
+	// checkif we have caching enabled
 	if config.Cache == "true" {
 		server, err := config.GetServer("redis")
 		if err != nil {
