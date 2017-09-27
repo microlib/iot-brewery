@@ -28,7 +28,7 @@ func main() {
 	time.Sleep(200 * time.Millisecond)
 
 	tr := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: false},
 	}
 
 	cr := cron.New()

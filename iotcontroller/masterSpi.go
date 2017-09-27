@@ -21,7 +21,7 @@ var (
 )
 
 type IOTData struct {
-	Id          int       `json:"id"`
+	BoardId          int       `json:"BoardId"`
 	Description string    `json:"description"`
 	Temperature []float32 `json:"temperature"`
 	DigitalIOA  uint8     `json:"digitalIOA"`
@@ -136,12 +136,12 @@ func processIOT(tr *http.Transport, config Config) {
 
 		
 		logger.Debug(fmt.Sprintf("masterSPI sent ioChannel A data : %d B data : %d", ioChannelA, ioChannelB))
-		iotdata := &IOTData{Id: 1, Description: "Board IOT", Temperature: t, DigitalIOA: ioChannelA, DigitalIOB: ioChannelB, Time: time.Now()}
+		iotdata := &IOTData{BoardId: 1, Description: "Board IOT", Temperature: t, DigitalIOA: ioChannelA, DigitalIOB: ioChannelB, Time: time.Now()}
 		b, _ := json.Marshal(iotdata)
 		logger.Trace(string(b))
 
-		req, err := http.NewRequest("POST", config.Url, bytes.NewBuffer(b))
-		req.Header.Set("X-Custom-Header", "affdg3462357")
+		req, err := http.NewRequest("POST", config.Url + "?apikey=" + config.Apikey, bytes.NewBuffer(b))
+		req.Header.Set("X-Custom-Header", config.Apikey)
 		req.Header.Set("Content-Type", "application/json")
 
 		client := &http.Client{Transport: tr}
